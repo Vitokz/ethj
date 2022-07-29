@@ -1,13 +1,13 @@
 package modules
 
 import (
-	"github.com/forbole/bdjuno/v3/modules/actions"
-	"github.com/forbole/bdjuno/v3/modules/types"
+	"github.com/Vitokz/ethj/modules/actions"
+	"github.com/Vitokz/ethj/modules/types"
 
 	"github.com/forbole/juno/v3/modules/pruning"
 	"github.com/forbole/juno/v3/modules/telemetry"
 
-	"github.com/forbole/bdjuno/v3/modules/slashing"
+	"github.com/Vitokz/ethj/modules/slashing"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -15,20 +15,20 @@ import (
 	"github.com/forbole/juno/v3/modules/messages"
 	"github.com/forbole/juno/v3/modules/registrar"
 
-	"github.com/forbole/bdjuno/v3/utils"
+	"github.com/Vitokz/ethj/utils"
 
-	"github.com/forbole/bdjuno/v3/database"
-	"github.com/forbole/bdjuno/v3/modules/auth"
-	"github.com/forbole/bdjuno/v3/modules/bank"
-	"github.com/forbole/bdjuno/v3/modules/consensus"
-	"github.com/forbole/bdjuno/v3/modules/distribution"
-	"github.com/forbole/bdjuno/v3/modules/feegrant"
+	"github.com/Vitokz/ethj/database"
+	"github.com/Vitokz/ethj/modules/auth"
+	"github.com/Vitokz/ethj/modules/bank"
+	"github.com/Vitokz/ethj/modules/consensus"
+	"github.com/Vitokz/ethj/modules/distribution"
+	"github.com/Vitokz/ethj/modules/feegrant"
 
-	"github.com/forbole/bdjuno/v3/modules/gov"
-	"github.com/forbole/bdjuno/v3/modules/mint"
-	"github.com/forbole/bdjuno/v3/modules/modules"
-	"github.com/forbole/bdjuno/v3/modules/pricefeed"
-	"github.com/forbole/bdjuno/v3/modules/staking"
+	"github.com/Vitokz/ethj/modules/gov"
+	"github.com/Vitokz/ethj/modules/mint"
+	"github.com/Vitokz/ethj/modules/modules"
+	"github.com/Vitokz/ethj/modules/pricefeed"
+	"github.com/Vitokz/ethj/modules/staking"
 )
 
 // UniqueAddressesParser returns a wrapper around the given parser that removes all duplicated addresses

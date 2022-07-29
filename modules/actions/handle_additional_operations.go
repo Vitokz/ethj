@@ -6,8 +6,8 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/forbole/bdjuno/v3/modules/actions/handlers"
-	actionstypes "github.com/forbole/bdjuno/v3/modules/actions/types"
+	"github.com/Vitokz/ethj/modules/actions/handlers"
+	actionstypes "github.com/Vitokz/ethj/modules/actions/types"
 )
 
 var (

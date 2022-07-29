@@ -8,9 +8,9 @@ import (
 	"github.com/forbole/juno/v3/types/config"
 	"github.com/spf13/cobra"
 
-	"github.com/forbole/bdjuno/v3/database"
-	authutils "github.com/forbole/bdjuno/v3/modules/auth"
-	"github.com/forbole/bdjuno/v3/utils"
+	"github.com/Vitokz/ethj/database"
+	authutils "github.com/Vitokz/ethj/modules/auth"
+	"github.com/Vitokz/ethj/utils"
 )
 
 // vestingCmd returns a Cobra command that allows to fix the vesting data for the accounts

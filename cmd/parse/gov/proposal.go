@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strconv"
 
-	modulestypes "github.com/forbole/bdjuno/v3/modules/types"
+	modulestypes "github.com/Vitokz/ethj/modules/types"
 	"github.com/rs/zerolog/log"
 
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
@@ -15,13 +15,13 @@ import (
 
 	"github.com/forbole/juno/v3/parser"
 
-	"github.com/forbole/bdjuno/v3/database"
-	"github.com/forbole/bdjuno/v3/modules/distribution"
-	"github.com/forbole/bdjuno/v3/modules/gov"
-	"github.com/forbole/bdjuno/v3/modules/mint"
-	"github.com/forbole/bdjuno/v3/modules/slashing"
-	"github.com/forbole/bdjuno/v3/modules/staking"
-	"github.com/forbole/bdjuno/v3/utils"
+	"github.com/Vitokz/ethj/database"
+	"github.com/Vitokz/ethj/modules/distribution"
+	"github.com/Vitokz/ethj/modules/gov"
+	"github.com/Vitokz/ethj/modules/mint"
+	"github.com/Vitokz/ethj/modules/slashing"
+	"github.com/Vitokz/ethj/modules/staking"
+	"github.com/Vitokz/ethj/utils"
 )
 
 // proposalCmd returns the Cobra command allowing to fix all things related to a proposal

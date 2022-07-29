@@ -8,15 +8,15 @@ import (
 	startcmd "github.com/forbole/juno/v3/cmd/start"
 	"github.com/forbole/juno/v3/modules/messages"
 
-	migratecmd "github.com/forbole/bdjuno/v3/cmd/migrate"
-	parsecmd "github.com/forbole/bdjuno/v3/cmd/parse"
+	migratecmd "github.com/Vitokz/ethj/cmd/migrate"
+	parsecmd "github.com/Vitokz/ethj/cmd/parse"
 
-	"github.com/forbole/bdjuno/v3/types/config"
+	"github.com/Vitokz/ethj/types/config"
 
-	"github.com/forbole/bdjuno/v3/database"
-	"github.com/forbole/bdjuno/v3/modules"
+	"github.com/Vitokz/ethj/database"
+	"github.com/Vitokz/ethj/modules"
 
-	gaiaapp "github.com/cosmos/gaia/v7/app"
+	ethapp "github.com/evmos/ethermint/app"
 )
 
 func main() {
@@ -28,7 +28,7 @@ func main() {
 		WithEncodingConfigBuilder(config.MakeEncodingConfig(getBasicManagers())).
 		WithRegistrar(modules.NewRegistrar(getAddressesParser()))
 
-	cfg := cmd.NewConfig("bdjuno").
+	cfg := cmd.NewConfig("ethj").
 		WithInitConfig(initCfg).
 		WithParseConfig(parseCfg)
 
@@ -55,7 +55,7 @@ func main() {
 // This should be edited by custom implementations if needed.
 func getBasicManagers() []module.BasicManager {
 	return []module.BasicManager{
-		gaiaapp.ModuleBasics,
+		ethapp.ModuleBasics,
 	}
 }
 
@@ -64,6 +64,13 @@ func getBasicManagers() []module.BasicManager {
 // This should be edited by custom implementations if needed.
 func getAddressesParser() messages.MessageAddressesParser {
 	return messages.JoinMessageParsers(
-		messages.CosmosMessageAddressesParser,
+		messages.BankMessagesParser,
+		messages.CrisisMessagesParser,
+		messages.DistributionMessagesParser,
+		messages.EvidenceMessagesParser,
+		messages.GovMessagesParser,
+		messages.SlashingMessagesParser,
+		messages.StakingMessagesParser,
+		messages.DistributionMessagesParser,
 	)
 }
